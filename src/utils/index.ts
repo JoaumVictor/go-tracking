@@ -10,7 +10,7 @@ const formatName = (name: string) => {
 }
 
 const statusBarHeight = StatusBar.currentHeight
-  ? StatusBar.currentHeight + 22
-  : 64
+  ? StatusBar.currentHeight + 12
+  : 54
 
 export { formatName, statusBarHeight }

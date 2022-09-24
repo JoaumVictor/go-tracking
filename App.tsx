@@ -1,12 +1,16 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet } from 'react-native';
 import React from 'react'
-import IndexRoutes from '~/routes';
+import Routes from '~/routes';
 import { NavigationContainer } from '@react-navigation/native';
+import { StatusBar } from 'expo-status-bar';
 
 export default function App() {
   return (
     <NavigationContainer>
-      <IndexRoutes />
+      <SafeAreaView style={styles.container}>
+        <StatusBar  backgroundColor='#1D1C83' />
+        <Routes />
+      </SafeAreaView>
     </NavigationContainer>
   )
 }
@@ -14,8 +18,5 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+  }
 });
